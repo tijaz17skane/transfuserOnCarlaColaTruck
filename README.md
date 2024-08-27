@@ -46,4 +46,8 @@ unzip model_ckpt/models_2022.zip -d model_ckpt/
 rm model_ckpt/models_2022.zip
 ```
 
+Ideally, place the model_ckpt folder inside your transfuser folder.
+
 ### 2.  Evaluating
+
+Run the CARLA server by 
