@@ -80,4 +80,5 @@ export CUDA_VISIBLE_DEVICES='1'
 ./local_evaluation.sh
 ```
 
+####  Parsing the Results
 
