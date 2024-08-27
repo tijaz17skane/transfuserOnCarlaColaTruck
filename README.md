@@ -22,5 +22,14 @@ pip install -r requirements.txt
 
 ## Follow the following steps to evaluate on your system
 
-1.  Clone this repo
+### 1.  Setup
+```python
+git clone https://github.com/autonomousvision/transfuser.git
+cd transfuser
+git checkout 2022
+chmod +x setup_carla.sh
+./setup_carla.sh
+conda env create -f environment.yml
+conda activate tfuse
+```
 2.  
