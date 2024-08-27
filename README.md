@@ -69,14 +69,15 @@ You might have to use either of the following if you don't see an increased Memo
 /CarlaUE4.sh --world-port=2000 -opengl
 ```
 ##### In the third terminal, evaluate an agent:
-first wait for CARLA server to get going, then run the following shell script
+First wait for CARLA server to get going, then run the following shell script. Next, go to _./leaderboard/scripts/_ and edit the first two lines of the _local_evaluation.sh_ file to use the correct file/directory paths. Run the following:
+
 ```python
-./leaderboard/scripts/local_evaluation.sh <carla root> <working directory of this repo (*/transfuser/)>
+cd path/to/leaderboard/scripts
 ```
-I found it better to go to 
-./leaderboard/scripts/ and edit the first two lines of the local_evaluation.sh file to use the correct file/directory paths, when i did so, I no longer needed to pass in the paths while running the following code:
 ```python
-./leaderboard/scripts/local_evaluation.sh
+conda activate tfuse
+export CUDA_VISIBLE_DEVICES='1'
+./local_evaluation.sh
 ```
 
 
