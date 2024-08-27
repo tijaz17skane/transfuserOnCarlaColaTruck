@@ -38,4 +38,10 @@ pip3 install torch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 --extra-index-
 pip install torch-scatter -f https://data.pyg.org/whl/torch-1.12.0+cu113.html
 pip install mmcv-full==1.6.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.12.0/index.html
 ```
-2.  
+### 2.  Getting Pre-Trained Agents
+```python
+mkdir model_ckpt
+wget https://s3.eu-central-1.amazonaws.com/avg-projects/transfuser/models_2022.zip -P model_ckpt
+unzip model_ckpt/models_2022.zip -d model_ckpt/
+rm model_ckpt/models_2022.zip
+```
