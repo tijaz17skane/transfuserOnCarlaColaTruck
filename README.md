@@ -61,7 +61,7 @@ Launch the CARLA server using the following command while being inside the CARLA
 ```python
 /CarlaUE4.sh --world-port=2000
 ```
-You might have to use either of the following if you don't see an increased Memory-Usage on nvidia-smi, or if you face compatibility issues
+You might have to use either of the following if you don't see an increase in Memory-Usage on nvidia-smi, or if you face compatibility issues
 ```python
 /CarlaUE4.sh --world-port=2000 -vulkan
 ```
