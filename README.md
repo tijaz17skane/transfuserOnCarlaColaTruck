@@ -45,3 +45,5 @@ wget https://s3.eu-central-1.amazonaws.com/avg-projects/transfuser/models_2022.z
 unzip model_ckpt/models_2022.zip -d model_ckpt/
 rm model_ckpt/models_2022.zip
 ```
+
+### 2.  Evaluating
