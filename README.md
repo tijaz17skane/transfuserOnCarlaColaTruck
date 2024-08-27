@@ -20,7 +20,7 @@ Reproducing results from Tubingen AI's transfuser and evaluating the model on a 
 pip install -r requirements.txt
 ```
 
+## Follow the following steps to evaluate on your system
 
-
-## Here are the steps I followed to get the code up and running:
-
+1.  Clone this repo
+2.  
