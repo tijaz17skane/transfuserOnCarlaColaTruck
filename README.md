@@ -82,3 +82,10 @@ export CUDA_VISIBLE_DEVICES='1'
 
 ####  Parsing the Results
 
+To compute additional statistics from the results of evaluation runs we provide a parser script tools/result_parser.py.
+```python
+${WORK_DIR}/tools/result_parser.py --xml ${WORK_DIR}/leaderboard/data/longest6/longest6.xml --results /path/to/folder/with/json_results/ --save_dir /path/to/output --town_maps ${WORK_DIR}/leaderboard/data/town_maps_xodr
+
+```
+
+
