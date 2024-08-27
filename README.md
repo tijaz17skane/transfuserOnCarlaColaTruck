@@ -48,7 +48,7 @@ rm model_ckpt/models_2022.zip
 
 Ideally, place the model_ckpt folder inside your transfuser folder.
 
-### 2.  Evaluating
+### 3.  Evaluating
 
 Open 3 terminals, atleast (I would do so).
 
