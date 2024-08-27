@@ -50,4 +50,33 @@ Ideally, place the model_ckpt folder inside your transfuser folder.
 
 ### 2.  Evaluating
 
-Run the CARLA server by 
+Open 3 terminals, atleast (I would do so).
+
+##### In the first terminal, Do:
+```python
+watch nvidia-smi
+```
+##### In the second terminal, launch CARLA server:
+Launch the CARLA server using the following command while being inside the CARLA directory
+```python
+/CarlaUE4.sh --world-port=2000
+```
+You might have to use either of the following if you don't see an increased Memory-Usage on nvidia-smi, or if you face compatibility issues
+```python
+/CarlaUE4.sh --world-port=2000 -vulkan
+```
+```python
+/CarlaUE4.sh --world-port=2000 -opengl
+```
+##### In the third terminal, evaluate an agent:
+first wait for CARLA server to get going, then run the following shell script
+```python
+./leaderboard/scripts/local_evaluation.sh <carla root> <working directory of this repo (*/transfuser/)>
+```
+I found it better to go to 
+./leaderboard/scripts/ and edit the first two lines of the local_evaluation.sh file to use the correct file/directory paths, when i did so, I no longer needed to pass in the paths while running the following code:
+```python
+./leaderboard/scripts/local_evaluation.sh
+```
+
+
