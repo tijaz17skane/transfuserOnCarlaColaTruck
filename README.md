@@ -12,8 +12,9 @@ Reproducing results from Tubingen AI's transfuser and evaluating the model on a 
 
 ## Driver Versions and Environment
 
-1.  Operating System: Ubuntu 20.04.6 LTS
-2.  GPUs: 2x NVIDIA A10-8Q
+1.  CUDA Version: 11.3 (the others didn't work so well for me)
+2.  Virtual Environment Manager: Conda
+3.  Python Version: 3.7.13
 
 
 ## Here are the steps I followed to get the code up and running:
