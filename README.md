@@ -15,6 +15,11 @@ Reproducing results from Tubingen AI's transfuser and evaluating the model on a 
 1.  CUDA Version: 11.3 (the others didn't work so well for me)
 2.  Virtual Environment Manager: Conda
 3.  Python Version: 3.7.13
+4.  My pip list can be found in requirements.txt
+```python
+pip install -r requirements.txt
+```
+
 
 
 ## Here are the steps I followed to get the code up and running:
