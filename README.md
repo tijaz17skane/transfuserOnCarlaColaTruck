@@ -32,4 +32,10 @@ chmod +x setup_carla.sh
 conda env create -f environment.yml
 conda activate tfuse
 ```
+**CUDA Compatibility issues took me a while to fix. I started with the ones provided by the developers and ended with the ones mentioned in requirements.txt. If installing those doesn't work, run the following to get the torch, torch-scatter and mmcv that worked for me.**
+```python
+pip3 install torch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 --extra-index-url https://download.pytorch.org/whl/cu113
+pip install torch-scatter -f https://data.pyg.org/whl/torch-1.12.0+cu113.html
+pip install mmcv-full==1.6.0 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.12.0/index.html
+```
 2.  
