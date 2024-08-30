@@ -2,6 +2,7 @@
 
 Reproducing results from Tubingen AI's transfuser and evaluating the model on a bigger vehicle. 
 
+## Setup: Follow this Setup to Ensure that everything is working fine
 
 ## System Specifications:
 
