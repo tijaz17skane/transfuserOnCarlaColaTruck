@@ -59,14 +59,14 @@ watch nvidia-smi
 ##### In the second terminal, launch CARLA server:
 Launch the CARLA server using the following command while being inside the CARLA directory
 ```python
-/CarlaUE4.sh --world-port=2000
+./CarlaUE4.sh --world-port=2000
 ```
 You might have to use either of the following if you don't see an increase in Memory-Usage on nvidia-smi, or if you face compatibility issues
 ```python
-/CarlaUE4.sh --world-port=2000 -vulkan
+./CarlaUE4.sh --world-port=2000 -vulkan
 ```
 ```python
-/CarlaUE4.sh --world-port=2000 -opengl
+./CarlaUE4.sh --world-port=2000 -opengl
 ```
 ##### In the third terminal, evaluate an agent:
 First wait for CARLA server to get going, then run the following shell script. Next, go to _./leaderboard/scripts/_ and edit the first two lines of the _local_evaluation.sh_ file to use the correct file/directory paths. Run the following:
