@@ -20,9 +20,7 @@ from shapely.geometry import Polygon
 
 import itertools
 import pathlib
-
-SAVE_PATH = os.environ.get('SAVE_PATH')
-SAVE_PATH = os.environ.get('SAVE_PATH', '/home/tijp4b/Downloads/transfuser/debugView')
+SAVE_PATH = os.environ.get('SAVE_PATH', '/home/tijp4b/transfuser/debugView')
 
 if not SAVE_PATH:
     SAVE_PATH = None
@@ -122,26 +120,27 @@ class HybridAgent(autonomous_agent.AutonomousAgent):
         return gps
 
     def sensors(self):
-        offset = 0.075
+        offset_camera = 0.075
         offset_lidar = 0.375
-        sensors = [ 
+        sensors = [
+                    
                     {
                         'type': 'sensor.camera.rgb',
-                        'x': self.config.camera_pos[0], 'y': self.config.camera_pos[1], 'z':self.config.camera_pos[2]+offset,
+                        'x': self.config.camera_pos[0], 'y': self.config.camera_pos[1], 'z':self.config.camera_pos[2]+offset_camera,
                         'roll': self.config.camera_rot_0[0], 'pitch': self.config.camera_rot_0[1], 'yaw': self.config.camera_rot_0[2],
                         'width': self.config.camera_width, 'height': self.config.camera_height, 'fov': self.config.camera_fov,
                         'id': 'rgb_front'
                         },
                     {
                         'type': 'sensor.camera.rgb',
-                        'x': self.config.camera_pos[0], 'y': self.config.camera_pos[1], 'z':self.config.camera_pos[2]+offset,
+                        'x': self.config.camera_pos[0], 'y': self.config.camera_pos[1], 'z':self.config.camera_pos[2]+offset_camera,
                         'roll': self.config.camera_rot_1[0], 'pitch': self.config.camera_rot_1[1], 'yaw': self.config.camera_rot_1[2],
                         'width': self.config.camera_width, 'height': self.config.camera_height, 'fov': self.config.camera_fov,
                         'id': 'rgb_left'
                         },
                     {
                         'type': 'sensor.camera.rgb',
-                        'x': self.config.camera_pos[0], 'y': self.config.camera_pos[1], 'z':self.config.camera_pos[2]+offset,
+                        'x': self.config.camera_pos[0], 'y': self.config.camera_pos[1], 'z':self.config.camera_pos[2]+offset_camera,
                         'roll': self.config.camera_rot_2[0], 'pitch': self.config.camera_rot_2[1], 'yaw': self.config.camera_rot_2[2],
                         'width': self.config.camera_width, 'height': self.config.camera_height, 'fov': self.config.camera_fov,
                         'id': 'rgb_right'
